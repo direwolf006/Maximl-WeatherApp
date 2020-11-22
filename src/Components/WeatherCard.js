@@ -1,13 +1,11 @@
 import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import IconButton from "@material-ui/core/IconButton";
-import fetchWeatherApi from "../OpenWeatherApi/fetchWeatherApi";
-import Typography from "@material-ui/core/Typography";
-import TextField from "@material-ui/core/TextField";
+import {Card,IconButton,TextField,Typography} from "@material-ui/core";
 import EditIcon from "@material-ui/icons/Edit";
 import SearchIcon from "@material-ui/icons/Search";
 import fetchImage from "./fetchImage";
+import fetchWeatherApi from "../OpenWeatherApi/fetchWeatherApi";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -62,6 +60,7 @@ const WeatherCard = ({ showError }) => {
           <TextField
             label="Enter City"
             variant="outlined"
+            size="medium"
             className={classes.textField}
             color="primary"
             InputLabelProps={{ color: "primary" }}
@@ -82,7 +81,7 @@ const WeatherCard = ({ showError }) => {
           }}
         >
           <Typography
-            variant="h5"
+            variant="h6"
             gutterBottom
             style={{ marginTop: "3%", color: "#01579b" }}
           >
@@ -105,14 +104,14 @@ const WeatherCard = ({ showError }) => {
       />
 
       <Typography
-        variant="h5"
+        variant="h6"
         gutterBottom
         style={{ color: "#01579b", textAlign: "center" }}
       >
         {cityData.temperature}
       </Typography>
       <Typography
-        variant="h5"
+        variant="h6"
         gutterBottom
         style={{ color: "#01579b", textAlign: "center" }}
       >
