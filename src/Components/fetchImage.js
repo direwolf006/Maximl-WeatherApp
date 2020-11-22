@@ -23,23 +23,23 @@ const fetchImage = (id) => {
   } else if (id >= 600 && id <= 622) {
     return snowfall;
   } else if (id >= 700 && id <= 781) {
-    if (id == 701) {
+    if (id === 701) {
       return mist;
-    } else if (id == 711) {
+    } else if (id === 711) {
       return smoke;
-    } else if (id == 721) {
+    } else if (id === 721) {
       return haze;
-    } else if (id == 731 || id == 761) {
+    } else if (id === 731 || id === 761) {
       return dust;
-    } else if (id == 741) {
+    } else if (id === 741) {
       return fog;
-    } else if (id == 762) {
+    } else if (id === 762) {
       return ash;
-    } else if (id == 781) {
+    } else if (id === 781) {
       return tornado;
     }
   } else if (id >= 801 && id <= 804) {
-    if (id == 803) {
+    if (id === 803) {
       return broken_clouds;
     }
     return cloudy;
