@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#b3e5fc"
   },
   media: {
-    height: 200,
+    height: 190,
     width: "100%",
     marginBottom: "2%"
   }
