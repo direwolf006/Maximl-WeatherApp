@@ -1,11 +1,10 @@
 import React from "react";
-import {makeStyles} from "@material-ui/core/styles";
-import {Card,IconButton,TextField,Typography} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import { Card, IconButton, TextField, Typography } from "@material-ui/core";
 import EditIcon from "@material-ui/icons/Edit";
 import SearchIcon from "@material-ui/icons/Search";
 import fetchImage from "./fetchImage";
 import fetchWeatherApi from "../OpenWeatherApi/fetchWeatherApi";
-
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,12 +39,33 @@ const WeatherCard = ({ showError }) => {
         name: data.name,
         temperature: Math.round(data.main.temp).toString() + " °C",
         weather: data.weather[0].description
-    });
+      });
     } else {
       showError();
     }
     setEditMode(!editMode);
   };
+
+  // const updateCityWeatherData = async () => {
+  //   const data = await fetchWeatherApi(cityData.name);
+  //     setCityData({
+  //       ...cityData,
+  //       id: data.weather[0].id,
+  //       name: data.name,
+  //       temperature: Math.round(data.main.temp).toString() + " °C",
+  //       weather: data.weather[0].description
+  //   });
+  //   console.log("fetched udpated weather "+cityData.name);
+  // };
+
+  // useEffect(()=>{
+  //   setInterval(() => {
+  //     if(cityData.id!==0){
+  //       updateCityWeatherData();
+  //     }
+  //   }, 1800000)
+
+  // },[])
 
   return (
     <Card className={classes.root}>
