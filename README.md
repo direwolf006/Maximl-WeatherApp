@@ -1,1 +1,1 @@
-# Maxmi-WeatherApp
+# Maximl-WeatherApp
