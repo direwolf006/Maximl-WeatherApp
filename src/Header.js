@@ -17,16 +17,18 @@ const Header = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static">
-      <Toolbar
-        variant="dense"
-        style={{ padding: 7, marginRight: "30%", marginLeft: "30%" }}
-      >
-        <Typography variant="h6" color="inherit">
-          Maxmi labs Weather app - Rittesh.P.V (rv7685@srmist.edu.in)
-        </Typography>
-      </Toolbar>
-    </AppBar>
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar
+          variant="dense"
+          style={{ padding: 7, marginLeft: "35%", marginRight: "35%" }}
+        >
+          <Typography variant="h6" color="inherit">
+            Maximl labs Weather app - Rittesh.P.V (rv7685@srmist.edu.in)
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
   );
 };
 
